@@ -2,8 +2,9 @@
 
 The bird2 config for my network
 
+
+## Internal Community:
 ```
-# Internal Community:
 #  (138211, <999,  0)  Community for all my node
 #  (138211, <999,  1)  Community only for this node
 #  (138211,    1, *)   do not send to ibgp
@@ -14,8 +15,10 @@ The bird2 config for my network
 #  (138211,  202, *)   peer routes
 #  (138211,  203, *)   customer routes
 #  (138211,  204, *)   ibgp routes
-#
-# Control Community:
+```
+
+## Control Community:
+```
 #   Actions:
 #    * = 0   do not announce to target
 #    * = 1   prepend 1 to target
@@ -37,8 +40,11 @@ The bird2 config for my network
 #    (138211, 1*30, 1)            Do action to upstreams
 #    (138211, 1*30, 2)            Do action to peers
 #    (138211, 1*30, 3)            Do action to downstreams
-#   Examples:
-#     prepend 11 to AS6939: 
+```
+
+###   Examples:
+```
+#    prepend 11 to AS6939: 
 #       (138211, 1102, 6939): prepend 1 to AS6939
 #       (138211, 1202, 6939): prepend 2 to AS6939
 #       (138211, 1802, 6939): prepend 8 to AS6939
@@ -48,12 +54,16 @@ The bird2 config for my network
 #      (138211, 1201, 6939):  don't do this action(prepend 2) to AS6939
 #    do not announce to anyone: 
 #      (138211, 1000, 0):     do not announce to everyone
-#
-# Informational Community
+```
+
+## Informational Community
+```
 #  (138211, 10000, region_code)    Received from region
 #  (138211, 10001, country_code)   Received from country
-# 
-# Region code:
+```
+
+## Region code:
+```
 #  * 41: Europe
 #  * 42: North America-E
 #  * 43: North America-C
@@ -76,6 +86,6 @@ The bird2 config for my network
 #  ISO-3166 numeric-3 country code
 ```
 
-### Credits
+## Credits
 
-* Special thanks KSKB
+* Special thanks [KusakabeShi](https://github.com/KusakabeShi)
