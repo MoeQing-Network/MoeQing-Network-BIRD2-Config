@@ -1,6 +1,6 @@
 # MoeQing Network | AS138211
 
-The bird2 config for my network
+The bird2 config for MoeQing Network
 
 
 ## Internal Community:
@@ -13,7 +13,7 @@ The bird2 config for my network
 (138211,  101, region_code)   allow bgp_local_perf
 (138211,  201, region_code)   transit routes
 (138211,  202, region_code)   peer routes
-(138211,  203, region_code)   customer routes
+(138211,  203, region_code)   customer routes / announced to all locations
 (138211,  204, region_code)   ibgp routes
 ```
 
@@ -54,6 +54,10 @@ The bird2 config for my network
     (138211, 1201, 6939):  don't do this action(prepend 2) to AS6939
   do not announce to anyone: 
     (138211, 1000, 0):     do not announce to everyone
+  announced to all locations:
+    (138211, 203, 0) announced to all locations
+  announced in Asia only:
+    To be added
 ```
 
 ## Informational Community
