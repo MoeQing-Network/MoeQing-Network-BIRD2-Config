@@ -4,17 +4,21 @@ The bird2 config for MoeQing Network
 
 
 ## Internal Community:
+
+>(138211, <999,  0)            Community for all my node
+>
+>(138211, <999,  1)            Community only for this node
+
 ```
-(138211, <999,  0)            Community for all my node
-(138211, <999,  1)            Community only for this node
-(138211,    1, region_code)   do not send to ibgp
-(138211,    2, region_code)   do not send to ebgp
-(138211,    3, region_code)   do not send to kernel
-(138211,  101, region_code)   allow bgp_local_perf
-(138211,  201, region_code)   transit routes
-(138211,  202, region_code)   peer routes
-(138211,  203, region_code)   customer routes / announced to all locations
-(138211,  204, region_code)   ibgp routes
+(138211,    1, *)   do not send to ibgp
+(138211,    2, *)   do not send to ebgp
+(138211,    3, *)   do not send to kernel
+(138211,  101, *)   allow bgp_local_perf
+(138211,  201, *)   transit routes
+(138211,  202, *)   peer routes
+(138211,  203, *)   customer routes
+(138211,  204, *)   ixp routes
+(138211,  209, *)   ibgp routes
 ```
 
 ## Control Community:
@@ -40,6 +44,7 @@ The bird2 config for MoeQing Network
   (138211, 1*30, 1)            Do action to upstreams
   (138211, 1*30, 2)            Do action to peers
   (138211, 1*30, 3)            Do action to downstreams
+  (138211, 1*30, 4)            Do action to ixp RS
 ```
 
 ## Examples:
@@ -54,10 +59,10 @@ The bird2 config for MoeQing Network
     (138211, 1201, 6939):  don't do this action(prepend 2) to AS6939
   do not announce to anyone: 
     (138211, 1000, 0):     do not announce to everyone
-  announced to all locations:
-    (138211, 203, 0) announced to all locations
-  announced in Asia only:
-    To be added
+  announce to all locations:
+    (138211, 1019, 0):     announce to all locations
+  announce in Asia-E only:
+    (138211, 1011, 52):    announce to Asia-E location
 ```
 
 ## Informational Community
