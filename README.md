@@ -85,10 +85,10 @@ The bird2 config for MoeQing Network
 * 55: Asia-N (RU)
 * 56: Asia-W (IR, TR, UAE)
 * 57: Central Asia (AF, UZ, KZ)
-
-# Country code:
-ISO-3166 numeric-3 country code
 ```
+
+## Country code:
+ISO-3166 numeric-3 country code
 
 ## Credits
 
