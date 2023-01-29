@@ -18,6 +18,5 @@ update_prefix () {
   fi
 }
 
-update_prefix poema AS-POEMA
-update_prefix as211390 AS211390
+update_prefix 138211 as-moeqing
 
