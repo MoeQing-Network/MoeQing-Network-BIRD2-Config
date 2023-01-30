@@ -1,0 +1,13 @@
+# protocol bgp tem_RS1_v6 from pubebgp {
+#     source address fd09::1;
+#     neighbor fd09::2 as 114514;
+#     enforce first as off;
+#     ipv6 {
+#         cost 10;
+#         import where ebgp_import(114514, "ixrs", 0, prefix_all_v6, [0]);
+#         export where ebgp_export(114514, "ixrs", 0, prefix_all_v6, [0]);
+#         import limit 99999999 action block;
+#     };
+
+# };
+
