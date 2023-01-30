@@ -47,7 +47,7 @@ The bird2 config for MoeQing Network
   (138211, 1*30, 2)            Do action to ixp rs
   (138211, 1*30, 3)            Do action to peers
   (138211, 1*30, 4)            Do action to downstreams
-  (138211, 1░30, 8)            Do action to route collectors
+  (138211, 1*30, 8)            Do action to route collectors
 ```
 
 ## Examples:
