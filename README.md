@@ -69,12 +69,12 @@ The bird2 config for MoeQing Network
 ## Region code:
 ```
 * 41: Europe
-* 42: North America-E
-* 43: North America-C
-* 44: North America-W
+* 42: North America-East
+* 43: North America-Central
+* 44: North America-West
 * 45: Central America
-* 46: South America-E
-* 47: South America-W
+* 46: South America-Central
+* 47: South America-West
 * 48: Africa-N (above Sahara)
 * 49: Africa-S (below Sahara)
 * 50: Asia-S (IN, PK, BD)
