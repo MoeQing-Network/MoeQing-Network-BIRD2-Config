@@ -1,6 +1,6 @@
-# protocol bgp tem_RS1_v6 from pubebgp {
-#     source address fe80::207:705;
-#     neighbor fe80::114:514 % 'eth1' as 114514;
+# protocol bgp tem_peer_v6 from pubebgp {
+#     source address fd09::1;
+#     neighbor fd09::2 as 114514;
 #     enforce first as off;
 #     ipv6 {
 #         cost 10;

@@ -10,15 +10,17 @@ The bird2 config for MoeQing Network
 >(138211, <999,  1)            Community only for this node
 
 ```
-(138211,    1, *)   do not send to ibgp
-(138211,    2, *)   do not send to ebgp
-(138211,    3, *)   do not send to kernel
-(138211,  101, *)   allow bgp_local_perf
-(138211,  201, *)   transit routes
-(138211,  202, *)   peer routes
-(138211,  203, *)   customer routes
-(138211,  204, *)   ixp routes
-(138211,  209, *)   ibgp routes
+(138211,   1, *)   do not send to ibgp
+(138211,   2, *)   do not send to ebgp
+(138211,   3, *)   do not send to kernel
+(138211,   4, *)   send to kernel but mark unreachable
+(138211,   5, *)   send to kernel but mark blackhole
+(138211, 101, *)   allow bgp_local_perf
+(138211, 201, *)   transit routes
+(138211, 202, *)   ixp rs routes
+(138211, 203, *)   peer routes
+(138211, 204, *)   customer routes
+(138211, 209, *)   ibgp routes
 ```
 
 ## Control Community:
@@ -42,9 +44,10 @@ The bird2 config for MoeQing Network
   (138211, 1*21, country_code) Don't do action to this country
   (138211, 1*22, country_code) Do action to this country
   (138211, 1*30, 1)            Do action to upstreams
-  (138211, 1*30, 2)            Do action to peers
-  (138211, 1*30, 3)            Do action to downstreams
-  (138211, 1*30, 4)            Do action to ixp RS
+  (138211, 1*30, 2)            Do action to ixp rs
+  (138211, 1*30, 3)            Do action to peers
+  (138211, 1*30, 4)            Do action to downstreams
+  (138211, 1░30, 8)            Do action to route collectors
 ```
 
 ## Examples:
