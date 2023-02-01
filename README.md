@@ -62,10 +62,11 @@ The bird2 config for MoeQing Network
     (138211, 1201, 6939):  don't do this action(prepend 2) to AS6939
   do not announce to anyone: 
     (138211, 1000, 0):     do not announce to everyone
-  announce to all locations:
-    (138211, 1019, 0):     announce to all locations
+  announce to all region:
+    (138211, 1019, 0):     announce to all region
   announce in Asia-E only:
-    (138211, 1011, 52):    announce to Asia-E location
+    (138211, 1010, 0):     do not announce to every region
+    (138211, 1011, 52):    but announce to Asia-E region
 ```
 
 ## Informational Community
