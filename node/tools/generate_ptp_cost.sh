@@ -4,7 +4,9 @@
 for with_ll in $(cat /proc/net/if_inet6 | grep "^fe80" | tr -s ' ' | cut -d ' ' -f 6 | sort -u); do
 	# POINTOPOINT flag is 1 << 4, filter non-PTP interfaces out
 	if [ $(expr \( $(($(cat /sys/class/net/$with_ll/flags))) / 16 \) % 2) -ne 1 ]; then
-		continue
+		if [[ $with_ll != "MT-"* ]]; then
+			continue
+		fi
 	fi
 	cost=65535
 	ping_rtt=N/A
@@ -15,4 +17,4 @@ for with_ll in $(cat /proc/net/if_inet6 | grep "^fe80" | tr -s ' ' | cut -d ' ' 
 		cost=$(echo | awk '{ printf "%0.0f\n", ('$ping_rtt' * 100 / (100 - '$ping_loss') * 10); }')
 	fi
 	echo 'define PTP_IF_COST__'$(printf $with_ll | tr -c [:alnum:] _ | tr [a-z] [A-Z])' = '$cost'; # loss '$ping_loss'%, rtt '$ping_rtt'ms'
-done > ../ospf_cost.conf
+done > /etc/bird/ospf_cost.conf

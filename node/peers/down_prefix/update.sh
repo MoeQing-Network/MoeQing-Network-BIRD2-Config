@@ -21,5 +21,5 @@ update_prefix () {
   rm $1.conf.prefix
   rm $1.conf.asns
 }
-update_prefix 138211 as-moeqing
+update_prefix 200105 as-moeqing
 
