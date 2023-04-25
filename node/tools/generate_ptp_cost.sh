@@ -1,5 +1,5 @@
 #!/bin/sh
-
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # gathering all interfaces with IPv6 link-local address
 for with_ll in $(cat /proc/net/if_inet6 | grep "^fe80" | tr -s ' ' | cut -d ' ' -f 6 | sort -u); do
 	# POINTOPOINT flag is 1 << 4, filter non-PTP interfaces out
